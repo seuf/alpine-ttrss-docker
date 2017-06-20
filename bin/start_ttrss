@@ -1,0 +1,19 @@
+#!/bin/ash
+
+echo "Starting PHP-FPM"
+php-fpm5
+
+cd /var/www/tt-rss;
+echo "Setting permissions"
+mkdir -p cache
+chmod -R 777 cache
+chmod -R 777 lock
+chmod -R 777 feed-icons
+
+echo "Starting Nginx"
+nginx
+
+echo "Starting tt-rss update daemon"
+su operator -c "./update_daemon2.php"
+
+
