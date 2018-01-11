@@ -38,7 +38,7 @@ sed -i "s/TTRSS_DB_PORT/${TTRSS_DB_PORT}/" /var/www/tt-rss/config.php
 sed -i "s/TTRSS_DB_NAME/${TTRSS_DB_NAME}/" /var/www/tt-rss/config.php
 sed -i "s/TTRSS_DB_USER/${TTRSS_DB_USER}/" /var/www/tt-rss/config.php
 sed -i "s/TTRSS_DB_PASS/${TTRSS_DB_PASS}/" /var/www/tt-rss/config.php
-sed -i "s/TTRSS_SELF_URL_PATH/${sTTRSS_SELF_URL_PATH}/" /var/www/tt-rss/config.php
+sed -i "s!TTRSS_SELF_URL_PATH!${TTRSS_SELF_URL_PATH}!" /var/www/tt-rss/config.php
 
 
 if [ ! -f /usr/bin/php ]; then

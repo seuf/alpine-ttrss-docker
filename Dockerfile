@@ -1,7 +1,7 @@
 FROM alpine:edge
 RUN apk update
 RUN apk upgrade
-RUN apk add nginx php5-fpm php5-mysqli php5-json php5-iconv php5-dom php5-curl php5-pcntl php5-posix php5-gd git mariadb-client
+RUN apk add nginx php5-fpm php5-mysqli php5-json php5-iconv php5-dom php5-curl php5-pcntl php5-posix php5-gd php5-pdo_mysql git mariadb-client
 # RUN apk add nginx php7-fpm php7-mysqli php7-json php7-iconv php7-dom php7-curl php7-pcntl php7-posix php7-gd php7-session php7-mbstring git
 WORKDIR /var/www/
 RUN rm -rf localhost && \
